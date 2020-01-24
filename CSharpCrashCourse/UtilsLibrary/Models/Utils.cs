@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace SimpleCalc
+namespace UtilsLibrary.Models
 {
-    public class InputUtils
+    public class Utils
     {
         public static decimal GetIntputDecimal(string message)
         {
