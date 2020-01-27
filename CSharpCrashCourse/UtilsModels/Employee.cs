@@ -25,24 +25,24 @@ namespace UtilsModels
             return sb.ToString();
         }
         public double CalculatedSalary { get {return SalaryLevel*700; } }
-        public Employee(string email)
+        public Employee()
         {
-            if (email.Trim() == string.Empty || email.Trim() == null)
-            {
-                Email = "Info@zmco.be";
-            }
-            else
-            {
-                Email = email.Trim(' ').Replace(" ", "");
-            }
-            if (CalculatedSalary > 20000)
-            {
-                Console.WriteLine("You are filthy rich");
-            }
-            else
-            {
-                Console.WriteLine("see the big boss");
-            }
+            //if (email.Trim() == string.Empty || email.Trim() == null)
+            //{
+            //    Email = "Info@zmco.be";
+            //}
+            //else
+            //{
+            //    Email = email.Trim(' ').Replace(" ", "");
+            //}
+            //if (CalculatedSalary > 20000)
+            //{
+            //    Console.WriteLine("You are filthy rich");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("see the big boss");
+            //}
         }
     }
 }

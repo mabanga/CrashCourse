@@ -26,5 +26,16 @@ namespace UtilsLibrary.Models
             }
             return number;
         }
+        public static double GetDoubleputInt(string message)
+        {
+            double number;
+            Console.Write(message);
+            while (!double.TryParse(Console.ReadLine(), out number))
+            {
+                Console.Clear();
+                Console.Write(message);
+            }
+            return number;
+        }
     }
 }
