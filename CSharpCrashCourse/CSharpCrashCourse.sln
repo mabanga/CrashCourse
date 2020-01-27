@@ -11,11 +11,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarConsole", "CarConsole\Ca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeDemo", "EmployeeDemo\EmployeeDemo.csproj", "{71CD01BA-CD8D-4646-9E3B-23D1E669F56C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtilsModels", "UtilsModels\UtilsModels.csproj", "{07CA8ED2-5C90-40D2-BBA5-8EF56BD9B7C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtilsModels", "UtilsModels\UtilsModels.csproj", "{07CA8ED2-5C90-40D2-BBA5-8EF56BD9B7C3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleCar", "ConsoleCar\ConsoleCar.csproj", "{8E3D18E1-165F-4F68-9CCC-C92E07A0F079}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleEmployee", "ConsoleEmployee\ConsoleEmployee.csproj", "{3D74C03D-1450-4017-8997-2F8956C9578B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PersonManager", "PersonManager", "{E3AEECC5-6473-4069-8623-9355A201A32F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
