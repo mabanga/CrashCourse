@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-//using LibraryDLL;
+﻿
 using LibraryModels;
+using System;
 namespace ConsolePersonManager
 {
     class Program
@@ -12,6 +8,10 @@ namespace ConsolePersonManager
         static void Main(string[] args)
         {
             Person person = new Person();
+            person.Name = "John";
+            Console.WriteLine(person);
+
+            Console.ReadKey();
         }
     }
 }
