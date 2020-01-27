@@ -14,7 +14,8 @@ namespace ConsoleCar
             car.Color = "White";
             car.LicenceNumber = "ABC1234";
             Console.WriteLine(car);
-
+            car.Drive();
+            car.Break();
             Console.ReadKey();
 
         }

@@ -20,6 +20,14 @@ namespace UtilsModels
             sb.AppendLine($"Year \t\t: {Year}");
             return sb.ToString();
         }
+        public void Drive()
+        {
+            Console.WriteLine("wrrroooommmmmm");
+        }
+        public void Break()
+        {
+            Console.WriteLine("eeehhhhehehhehhehehhehe");
+        }
         public Car(string make)
         {
             Make = make;
