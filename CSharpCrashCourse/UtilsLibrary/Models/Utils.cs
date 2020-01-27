@@ -8,12 +8,21 @@ namespace UtilsLibrary.Models
         {
             decimal number;
             Console.Write(message);
-            string numberAsString = Console.ReadLine();
-            while (!decimal.TryParse(numberAsString, out number))
+            while (!decimal.TryParse(Console.ReadLine(), out number))
             {
                 Console.Clear();
-                Console.Write("A number: ");
-                numberAsString = Console.ReadLine();
+                Console.Write(message);
+            }
+            return number;
+        }
+        public static int GetIntputInt(string message)
+        {
+            int number;
+            Console.Write(message);
+            while (!int.TryParse(Console.ReadLine(), out number))
+            {
+                Console.Clear();
+                Console.Write(message);
             }
             return number;
         }
