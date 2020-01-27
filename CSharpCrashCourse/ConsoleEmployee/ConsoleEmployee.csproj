@@ -50,6 +50,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\UtilsLibrary\UtilsLibrary.csproj">
+      <Project>{1dc6489a-e867-4698-aef2-a4330688b836}</Project>
+      <Name>UtilsLibrary</Name>
+    </ProjectReference>
     <ProjectReference Include="..\UtilsModels\UtilsModels.csproj">
       <Project>{07ca8ed2-5c90-40d2-bba5-8ef56bd9b7c3}</Project>
       <Name>UtilsModels</Name>
