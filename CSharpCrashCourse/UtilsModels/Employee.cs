@@ -35,14 +35,14 @@ namespace UtilsModels
             {
                 Email = email.Trim(' ').Replace(" ", "");
             }
-            //if (CalculatedSalary>20000)
-            //{
-            //    Console.WriteLine("You are filthy rich");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("see the big boss");
-            //}
+            if (CalculatedSalary > 20000)
+            {
+                Console.WriteLine("You are filthy rich");
+            }
+            else
+            {
+                Console.WriteLine("see the big boss");
+            }
         }
     }
 }
