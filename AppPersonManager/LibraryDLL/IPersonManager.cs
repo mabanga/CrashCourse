@@ -7,5 +7,6 @@ namespace LibraryDLL
     {
         List<Person> GetPersons();
         Person AddPerson(Person person);
+        bool DeletePerson(int Id);
     }
 }

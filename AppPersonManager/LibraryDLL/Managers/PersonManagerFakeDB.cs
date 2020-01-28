@@ -24,12 +24,17 @@ namespace LibraryDLL.Managers
             return personFakeDB;
         }
 
+        public bool DeletePerson(int Id)
+        {
+            //personFakeDB.Remove();
+            return true;
+        }
 
         public PersonManagerFakeDB()
         {
-            AddPerson(new Person() { Name = "John" });
+            AddPerson(new Person() { Name = "John"});
             AddPerson(new Person() { Name = "Eric" });
-            AddPerson(new Person());
+            AddPerson(new Person() { Name = "Euloim" });
         }
     }
 }
