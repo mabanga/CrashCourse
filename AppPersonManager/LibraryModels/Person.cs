@@ -1,4 +1,6 @@
-﻿namespace LibraryModels
+﻿using System.Text;
+
+namespace LibraryModels
 {
     public class Person
     {
@@ -6,7 +8,10 @@
         public string Name { get; set; }
         public override string ToString()
         {
-            return $"{Name}";
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Id \t\t: {ID}");
+            sb.AppendLine($"Name \t\t: {Name}");
+            return $"{sb}";
         }
     }
 }

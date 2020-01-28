@@ -9,6 +9,7 @@ namespace LibraryDLL.Managers
     {
         int _id = 1;
         List<Person> personFakeDB = new List<Person>();
+
         public Person AddPerson(Person person)
         {
             Person addedPerson;
@@ -22,10 +23,13 @@ namespace LibraryDLL.Managers
         {
             return personFakeDB;
         }
+
+
         public PersonManagerFakeDB()
         {
             AddPerson(new Person() { Name = "John" });
             AddPerson(new Person() { Name = "Eric" });
+            AddPerson(new Person());
         }
     }
 }
