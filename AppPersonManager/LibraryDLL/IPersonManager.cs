@@ -6,6 +6,6 @@ namespace LibraryDLL
     public interface IPersonManager
     {
         List<Person> GetPersons();
-
+        Person AddPerson(Person person);
     }
 }
