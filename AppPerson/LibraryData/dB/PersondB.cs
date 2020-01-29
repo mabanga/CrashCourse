@@ -2,6 +2,8 @@
 using LibraryEntities.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace LibraryData.dB
 {
@@ -20,6 +22,8 @@ namespace LibraryData.dB
                 Gender = person.Gender,
                 ID=_id++
             });
+            //File.WriteAllLines(@"C:\Res\Studies\CSharp\CrashCourse\AppPerson\ConsolePerson\bin\Debug\txt.tx",
+            //                   //(Person)dB.ToString());
             return addedPerson;
         }
 
@@ -32,14 +36,14 @@ namespace LibraryData.dB
             AddPerson(new Person()
             {
                 Address = new Address() { Street = "Ledebaan", HouseNumber = "62", PostBox = "2", ZipCode = "9300", City = "Aalst", Country = "Belgique", Email = "zkm@gmail.com", Phone = "0466/00.00.00" },
-                Name = new Name() { FirstName = "Eric", LastName = "Kunga", SurName = "Kadima" },
+                Name = new Name("Eric") {LastName = "Kunga", SurName = "Kadima" },
                 BirthDate = new DateTime(1975, 11, 03, 12, 30, 15),
                 Gender = Gender.Male
             });
             AddPerson(new Person()
             {
                 Address = new Address() { Street = "Ledebaan1", HouseNumber = "621", PostBox = "21", ZipCode = "93001", City = "Aalst1", Country = "Belgique1", Email = "zkm@gmail.com", Phone = "0466/00.00.001" },
-                Name = new Name() { FirstName = "Eric1", LastName = "Kunga1", SurName = "Kadima1" },
+                Name = new Name("Eric1") { LastName = "Kunga1", SurName = "Kadima1" },
                 BirthDate = new DateTime(1975, 11, 03, 12, 30, 15),
                 Gender = Gender.Female
             });

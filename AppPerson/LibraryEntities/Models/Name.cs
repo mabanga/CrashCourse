@@ -13,5 +13,11 @@ namespace LibraryEntities.Models
             sb.Append($"{FirstName} {LastName} {SurName}");
             return $"{sb}";
         }
+        public Name(string firstname,string surname= "noSurName", string lastname= "noLastName")
+        {
+            FirstName = firstname;
+            SurName = surname;
+            LastName = lastname;
+        }
     }
 }

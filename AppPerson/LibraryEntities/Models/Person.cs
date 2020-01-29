@@ -23,5 +23,10 @@ namespace LibraryEntities.Models
             sb.AppendLine($"DeadDate \t: {DeadDate}");
             return $"{sb}";
         }
+
+        public static explicit operator Person(string v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
