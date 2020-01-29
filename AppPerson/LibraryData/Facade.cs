@@ -7,7 +7,7 @@ namespace LibraryData
 {
     public class Facade
     {
-        public IPersonAdmin /*GetPersonAdmin*/FIPersonAdmin()
+        public IPersonAdmin FIPersonAdmin()
         {
             return new PersondB();
         }

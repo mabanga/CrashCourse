@@ -9,24 +9,24 @@ namespace ConsolePerson
     {
         static void Main(string[] args)
         {
-
-            //Person p = new Person()
-            //{
-            //    Address = new Address() { Street = "Ledebaan", HouseNumber = "62", PostBox = "2", ZipCode = "9300", City = "Aalst", Country = "Belgique", Email = "zkm@gmail.com", Phone = "0466/00.00.00" },
-            //    Name = new Name() { FirstName = "Eric", LastName = "Kunga", SurName = "Kadima" },
-            //    BirthDate = new DateTime(1975, 11, 03, 12, 30, 15),
-            //    Gender = Gender.Male
-            //};
-            //Console.WriteLine(p);
-
             IPersonAdmin ipa = new Facade().FIPersonAdmin();
             var persons = ipa.InvetoryPersons();
             foreach (var item in persons)
             {
                 Console.WriteLine($"{item}");
             }
+            Person person = new Person()
+            {
+                Name = new Name() { FirstName = "test", LastName = "rest", SurName = "test" },
+                Address= new Address() { Street = "Ledebaan1", HouseNumber = "621", PostBox = "21", ZipCode = "93001", City = "Aalst1", Country = "Belgique1", Email = "zkm@gmail.com", Phone = "0466/00.00.001" }
+            };
+            Console.WriteLine("  ---  ");
+            ipa.AddPerson(person);
+            foreach (var item in persons)
+            {
+                Console.WriteLine($"{item}");
 
-
+            }
 
             Console.ReadKey();
         }
