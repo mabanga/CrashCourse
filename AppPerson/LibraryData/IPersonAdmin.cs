@@ -7,5 +7,7 @@ namespace LibraryData
     {
         List<Person> InvetoryPersons();
         Person AddPerson(Person person);
+        bool DeletePerson(int id);
+        Person UpdatePerson(Person person);
     }
 }

@@ -15,6 +15,7 @@ namespace ConsolePerson
             //{
             //    Console.WriteLine($"{item}");
             //}
+            
             Person person = new Person()
             {
                 Name = new Name("test") { LastName = "rest", SurName = "test" },
@@ -26,15 +27,39 @@ namespace ConsolePerson
                 Address = new Address() { Street = "Ledebaan1", HouseNumber = "621", PostBox = "21", ZipCode = "93001", City = "Aalst1", Country = "Belgique1", Email = "zkm@gmail.com", Phone = "0466/00.00.001" }
             };
             //Console.WriteLine("  ---  ");
-            ipa.AddPerson(person);
-            ipa.AddPerson(pers);
-            ipa.AddPerson(new Person() { Address = new Address(), Name = new Name("Ericksson"), Gender=Gender.Male });
+
+            //CREATE PERSON
+            //ipa.AddPerson(person);
+            //ipa.AddPerson(pers);
+            //ipa.AddPerson(new Person() { Address = new Address(), Name = new Name("Ericksson"), Gender=Gender.Male });
+            Person pTest = ipa.AddPerson(new Person() { Address = new Address(), Name = new Name("Kasesese"), Gender = Gender.Male });
+
+
+            //READ LIST PERSON
+            //foreach (var item in persons)
+            //{
+            //    Console.WriteLine($"{item}");
+            //}
+
+
+            //DELETE PERSON
+
+            //ipa.DeletePerson(pTest.ID);
+
+            //READ LIST PERSON
+            //foreach (var item in persons)
+            //{
+            //    Console.WriteLine($"{item}");
+            //}
+
+            //UPDATE PERSON
+            //pTest.Name = new Name("Petit Eric");
+            ipa.UpdatePerson(pTest);
+
             foreach (var item in persons)
             {
                 Console.WriteLine($"{item}");
-
             }
-
             Console.ReadKey();
         }
     }

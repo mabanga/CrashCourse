@@ -10,11 +10,11 @@ namespace LibraryData.dB
     public class PersondB : IPersonAdmin
     {
         private int _id = 1;
-        List<Person> dB = new List<Person>();
+        readonly List<Person> _dB = new List<Person>();
         public Person AddPerson(Person person)
         {
             Person addedPerson;
-            dB.Add(addedPerson = new Person()
+            _dB.Add(addedPerson = new Person()
             {
                 Address = person.Address,
                 Name = person.Name,
@@ -29,11 +29,40 @@ namespace LibraryData.dB
 
         public List<Person> InvetoryPersons()
         {
-            return dB;
+            return _dB;
         }
+
+        public bool DeletePerson(int id)
+        {
+            //foreach (var item in dB)
+            //{
+            //    if (Person.Id == id)
+            //    {
+            //        dB.Remove(Person);
+            //        return true;
+            //    }
+            //}
+            //return false;
+            int count = _dB.RemoveAll(person => person.ID == id);
+            return count > 0;
+        }
+
+        public Person UpdatePerson(Person person)
+        {
+            var personFromList=_dB.FirstOrDefault(x => x.ID == person.ID);
+            if (personFromList!=null)
+            {
+                personFromList.Name = person.Name;
+                return personFromList;
+            }
+            return person;
+
+        }
+
         public PersondB()
         {
-            AddPerson(new Person()
+            Person eric;
+            AddPerson(eric=new Person()
             {
                 Address = new Address() { Street = "Ledebaan", HouseNumber = "62", PostBox = "2", ZipCode = "9300", City = "Aalst", Country = "Belgique", Email = "zkm@gmail.com", Phone = "0466/00.00.00" },
                 Name = new Name("Eric") {LastName = "Kunga", SurName = "Kadima" },
