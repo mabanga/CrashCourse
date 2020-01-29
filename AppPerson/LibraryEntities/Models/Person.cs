@@ -6,6 +6,7 @@ namespace LibraryEntities.Models
 {
     public class Person
     {
+        public int ID { get; set; }
         public Name Name { get; set; }
         public Address Address { get; set; }
         public DateTime BirthDate { get; set; }
@@ -14,7 +15,7 @@ namespace LibraryEntities.Models
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Id \t\t: Not yet fixed");
+            sb.AppendLine($"Id \t\t: {ID}");
             sb.AppendLine($"Gender \t\t: {Gender}");
             sb.AppendLine($"Name \t\t: {Name}");
             sb.AppendLine($"Address \t: {Address}");

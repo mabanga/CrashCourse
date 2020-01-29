@@ -1,14 +1,11 @@
-﻿using System;
+﻿using LibraryEntities.Models;
 using System.Collections.Generic;
-using System.Text;
-using LibraryEntities;
-using LibraryEntities.Models;
 
 namespace LibraryData
 {
     public interface IPersonAdmin
     {
-        List<Person> GetAllPersons();
+        List<Person> InvetoryPersons();
         Person AddPerson(Person person);
     }
 }
