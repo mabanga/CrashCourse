@@ -1,8 +1,9 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 
 namespace LibraryEntities.Models
 {
-    public class Name
+    public class Name:IComparable<Name>
     {
         public string SurName { get; set; }
         public string FirstName { get; set; }
@@ -13,11 +14,19 @@ namespace LibraryEntities.Models
             sb.Append($"{FirstName} {LastName} {SurName}");
             return $"{sb}";
         }
+
+        public int CompareTo(Name other)
+        {
+            return FirstName.CompareTo(other.FirstName);
+
+        }
+
         public Name(string firstname,string surname= "noSurName", string lastname= "noLastName")
         {
             FirstName = firstname;
             SurName = surname;
             LastName = lastname;
         }
+
     }
 }

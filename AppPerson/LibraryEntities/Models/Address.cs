@@ -1,8 +1,9 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 
 namespace LibraryEntities.Models
 {
-    public class Address
+    public class Address:IComparable<Address>
     {
         public string Street { get; set; }
         public string HouseNumber { get; set; }
@@ -19,6 +20,12 @@ namespace LibraryEntities.Models
             sb.Append($"{Street} {HouseNumber}/{PostBox} {ZipCode} {City} {Country} {Phone} {Email} {Fax}");
             return $"{sb}";
         }
+
+        public int CompareTo(Address other)
+        {
+            return Email.CompareTo(other.Email);
+        }
+
         public Address(string street= "noStreet", string houseNumber= "noHouseNumber",string postBox= "noPostBox", string zipCode= "noZipCode",string city= "noCity", string country= "noCountry",string phone= "noPhone",string email= "noEmail", string fax= "noFax")
         {
             Street = street;

@@ -7,10 +7,12 @@ using System.Linq;
 
 namespace LibraryData.dB
 {
-    public class PersondB : IPersonAdmin
+    public class PersondB : IPersonAdmin, IComparable<Person>
     {
         private int _id = 1;
-        readonly List<Person> _dB = new List<Person>();
+
+        public List<Person> _dB = new List<Person>();
+
         public Person AddPerson(Person person)
         {
             Person addedPerson;
@@ -22,8 +24,6 @@ namespace LibraryData.dB
                 Gender = person.Gender,
                 ID=_id++
             });
-            //File.WriteAllLines(@"C:\Res\Studies\CSharp\CrashCourse\AppPerson\ConsolePerson\bin\Debug\txt.tx",
-            //                   //(Person)dB.ToString());
             return addedPerson;
         }
 
@@ -59,13 +59,29 @@ namespace LibraryData.dB
 
         }
 
+        public int CompareTo(Person other)
+        {
+            if (other.ID < this._id)
+            {
+                return 1;
+            }
+            else if (other.ID > this._id)
+            {
+                return -1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
         public PersondB()
         {
             Person eric;
             AddPerson(eric=new Person()
             {
                 Address = new Address() { Street = "Ledebaan", HouseNumber = "62", PostBox = "2", ZipCode = "9300", City = "Aalst", Country = "Belgique", Email = "zkm@gmail.com", Phone = "0466/00.00.00" },
-                Name = new Name("Eric") {LastName = "Kunga", SurName = "Kadima" },
+                Name = new Name("ZEric") {LastName = "Kunga", SurName = "Kadima" },
                 BirthDate = new DateTime(1975, 11, 03, 12, 30, 15),
                 Gender = Gender.Male
             });

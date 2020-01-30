@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LibraryEntities.Models
 {
-    public class Person
+    public class Person :IComparable<Person>
     {
         public int ID { get; set; }
         public Name Name { get; set; }
@@ -12,6 +12,12 @@ namespace LibraryEntities.Models
         public DateTime BirthDate { get; set; }
         public DateTime DeadDate { get; set; }
         public Gender Gender { get; set; }
+
+        public int CompareTo(Person other)
+        {
+            return ID.CompareTo(other.ID);
+        }
+
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
@@ -22,11 +28,6 @@ namespace LibraryEntities.Models
             sb.AppendLine($"BirthDate \t: {BirthDate}");
             sb.AppendLine($"DeadDate \t: {DeadDate}");
             return $"{sb}";
-        }
-
-        public static explicit operator Person(string v)
-        {
-            throw new NotImplementedException();
         }
     }
 }
