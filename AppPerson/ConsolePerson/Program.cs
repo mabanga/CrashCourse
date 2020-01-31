@@ -62,16 +62,19 @@ namespace ConsolePerson
             //pTest.Name = new Name("Petit Eric");
             //ipa.UpdatePerson(pTest);
             persons.Sort();
-            foreach (var item in persons)
-            {
-                Console.WriteLine($"{item}");
-            }
+            persons.ForEach(pers => Console.WriteLine(pers.ID + " " + pers.Name + " \t" + pers.Gender));
+            //foreach (var item in persons)
+            //{
+            //    Console.WriteLine($"{item}");
+            //}
             Console.WriteLine("----");
             persons.Reverse();
-            foreach (var item in persons)
-            {
-                Console.WriteLine($"{item.Name}");
-            }
+            persons.ForEach(pers => Console.WriteLine(pers.ID + " " + pers.Name + " \t" + pers.Gender));
+
+            //foreach (var item in persons)
+            //{
+            //    Console.WriteLine($"{item.Name}");
+            //}
             Console.ReadKey();
         }
     }

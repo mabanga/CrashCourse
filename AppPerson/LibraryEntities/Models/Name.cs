@@ -11,7 +11,7 @@ namespace LibraryEntities.Models
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append($"{FirstName} {LastName} {SurName}");
+            sb.Append($"{FirstName}\t {LastName}\t {SurName}");
             return $"{sb}";
         }
 

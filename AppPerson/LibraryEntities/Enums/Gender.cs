@@ -1,9 +1,12 @@
-﻿namespace LibraryEntities
+﻿using System;
+
+namespace LibraryEntities
 {
-    public enum Gender
+    public enum Gender 
     {
         Undefined,
         Male,
         Female
+           
     }
 }
